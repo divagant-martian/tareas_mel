@@ -8,6 +8,7 @@
 \begin_preamble
 \newcommand{\false}{\texttt{false} }
 \newcommand{\true}{\texttt{true} }
+\usepackage{lipsum}
 \end_preamble
 \use_default_options false
 \maintain_unincluded_children false
@@ -58,16 +59,16 @@
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 2cm
-\topmargin 2cm
-\rightmargin 2cm
-\bottommargin 2cm
+\leftmargin 1.5cm
+\topmargin 1.5cm
+\rightmargin 1.5cm
+\bottommargin 1.5cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
 \quotes_language french
-\papercolumns 1
+\papercolumns 2
 \papersides 1
 \paperpagestyle default
 \tracking_changes false
@@ -110,8 +111,12 @@ La igualdad:
 , Veamos que es tanto simétrica como antisimétrica
 \end_layout
 
-\begin_layout Itemize
-Simétrica:
+\begin_layout Standard
+
+\series bold
+Simétrica
+\series default
+:
 \begin_inset Formula 
 \begin{align*}
  & =\text{ es simétrica}\\
@@ -130,8 +135,12 @@ Simétrica:
 
 \end_layout
 
-\begin_layout Itemize
-Antisimétrica:
+\begin_layout Standard
+
+\series bold
+Antisimétrica
+\series default
+:
 \begin_inset Formula 
 \begin{align*}
  & =\text{ es antisimétrica}\\
@@ -167,20 +176,27 @@ antisimétrica pero no sea simétrica
  (mediante contraejemplo)
 \end_layout
 
-\begin_layout Itemize
-Antisimétrica:
+\begin_layout Standard
+
+\series bold
+Antisimétrica
+\series default
+:
 \begin_inset Formula 
 \begin{align*}
  & \leq\text{ es antisimétrica}\\
 \equiv & \left\langle \text{Def de antisimetría}\right\rangle \\
  & \left(\forall x,y\mid:x\leq y\land y\leq x\implies x=y\right)\\
 \equiv & \left\langle a\leq b\equiv a<b\lor a=b\right\rangle \\
- & \left(\forall x,y\mid:\left(x<y\lor x=y\right)\land\left(y<x\lor y=x\right)\implies x=y\right)\\
+ & \left(\forall x,y\mid:\left(x<y\lor x=y\right)\land\left(y<x\lor y=x\right)\right.\\
+ & \left.\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\implies x=y\right)\\
 \equiv & \left\langle \text{=es conmutativa}\right\rangle \\
- & \left(\forall x,y\mid:\left(x<y\lor x=y\right)\land\left(y<x\lor x=y\right)\implies x=y\right)\\
+ & \left(\forall x,y\mid:\left(x<y\lor x=y\right)\land\left(y<x\lor x=y\right)\right.\\
+ & \left.\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\implies x=y\right)\\
 \equiv & \left\langle \text{Distributividad del }\lor\text{ sobre el }\land\right\rangle \\
  & \left(\forall x,y\mid:\left(x<y\land y<x\right)\lor x=y\implies x=y\right)\\
-\equiv & \left\langle \text{Por tricotomía solo una de las tres es cierta: }a<b\text{, }b<a\text{, }a=b\right\rangle \\
+\equiv & \left\langle \text{Por tricotomía solo una de las tres es }\right.\\
+ & \left.\text{ \,cierta: }a<b\text{, }b<a\text{, }a=b\right\rangle \\
  & \left(\forall x,y\mid:\false\lor x=y\implies x=y\right)\\
 \equiv & \left\langle \text{Identidad del }\lor\right\rangle \\
  & \left(\forall x,y\mid:x=y\implies x=y\right)\\
@@ -195,8 +211,12 @@ Antisimétrica:
 
 \end_layout
 
-\begin_layout Itemize
-No es simétrica: Contraejemplo 
+\begin_layout Standard
+
+\series bold
+No es simétrica
+\series default
+: Contraejemplo 
 \begin_inset Formula $3\leq4$
 \end_inset
 
@@ -273,15 +293,15 @@ Si
  es reflexiva
 \begin_inset Formula 
 \begin{align*}
- & R\text{ y }S\text{ son reflexivas},\text{ }R\cap S\text{ es reflexiva}\\
+ & R\text{ y }S\text{ son reflexivas}\\
+\equiv & \left\langle \text{Definición de reflexividad}\right\rangle \\
+ & \left(\forall x\in X\mid:xRx\right)\land\left(\forall x\in X\mid:xSx\right)\\
+\equiv & \left\langle \text{Partir rango}\right\rangle \\
+ & \left(\forall x\in X\mid:xRx\land xSx\right)\\
+\equiv & \left\langle \text{Definición de intersección}\right\rangle \\
+ & \left(\forall x\in X\mid:x\left(R\cap S\right)x\right)\\
 \equiv & \left\langle \text{ Definición de reflexividad}\right\rangle \\
- & \left(\forall x\in X\mid:xRx\right)\land\left(\forall x\in X\mid:xSx\right)\implies\left(\forall x\in X\mid:x\left(R\cap S\right)x\right)\\
-\equiv & \left\langle \text{ Definición de intersección }\right\rangle \\
- & \left(\forall x\in X\mid:xRx\right)\land\left(\forall x\in X\mid:xSx\right)\implies\left(\forall x\in X\mid:xRx\land xSx\right)\\
-\equiv & \left\langle \text{ Partir rango }\right\rangle \\
- & \left(\forall x\in X\mid:xRx\land xSx\right)\implies\left(\forall x\in X\mid:xRx\land xSx\right)\\
-\equiv & \left\langle \text{ Implica es reflexiva: }p\Rightarrow p\equiv\true\right\rangle \\
- & \true
+ & R\cap S\text{ es reflexiva}
 \end{align*}
 
 \end_inset
@@ -305,15 +325,17 @@ Si
  es reflexiva
 \begin_inset Formula 
 \begin{align*}
- & R\text{ y }S\text{ son reflexivas},\text{ }R\cup S\text{ es reflexiva}\\
+ & R\text{ y }S\text{ son reflexivas},\text{ }\\
 \equiv & \left\langle \text{Definición de reflexividad}\right\rangle \\
- & \left(\forall x\in X\mid:xRx\right)\land\left(\forall x\in X\mid:xSx\right)\implies\left(\forall x\in X\mid:x\left(R\cup S\right)x\right)\\
-\equiv & \left\langle \text{Definición de intersección }\right\rangle \\
- & \left(\forall x\in X\mid:xRx\right)\land\left(\forall x\in X\mid:xSx\right)\implies\left(\forall x\in X\mid:xRx\lor xSx\right)\\
+ & \left(\forall x\in X\mid:xRx\right)\land\left(\forall x\in X\mid:xSx\right)\\
 \equiv & \left\langle \text{Partir rango }\right\rangle \\
- & \left(\forall x\in X\mid:xRx\land xSx\right)\implies\left(\forall x\in X\mid:xRx\lor xSx\right)\\
-\equiv & \left\langle \text{Por debilitamiento, }a\land b\implies a\lor b\right\rangle \\
- & \true
+ & \left(\forall x\in X\mid:xRx\land xSx\right)\\
+\Rightarrow & \left\langle \text{Por debilitamiento, }a\land b\implies a\lor b\right\rangle \\
+ & \left(\forall x\in X\mid:xRx\lor xSx\right)\\
+\equiv & \left\langle \text{Definición de unión }\right\rangle \\
+ & \left(\forall x\in X\mid:x\left(R\cup S\right)x\right)\\
+\equiv & \left\langle \text{Definición de reflexividad}\right\rangle \\
+ & R\cup S\text{ es reflexiva}
 \end{align*}
 
 \end_inset
@@ -337,15 +359,17 @@ Si
  es simétrica
 \begin_inset Formula 
 \begin{align*}
- & R\text{ y }S\text{ son simétricas},\text{ }R\cap S\text{ es simétrica}\\
+ & R\text{ y }S\text{ son simétricas}\\
 \equiv & \left\langle \text{Definición de simetría}\right\rangle \\
- & \left(\forall x,y\mid:xRy\Rightarrow yRx\right)\land\left(\forall x,y\mid:xSy\Rightarrow ySx\right)\implies\left(\forall x,y\mid:x\left(R\cap S\right)y\Rightarrow y\left(R\cap S\right)x\right)\\
-\equiv & \left\langle \text{Definición de intersección }\right\rangle \\
- & \left(\forall x,y\mid:xRy\Rightarrow yRx\right)\land\left(\forall x,y\mid:xSy\Rightarrow ySx\right)\implies\left(\forall x,y\mid:xRy\land xSy\Rightarrow yRx\land ySx\right)\\
-\equiv & \left\langle \text{Partir rango }\right\rangle \\
- & \left(\forall x\in X\mid:xRx\land xSx\right)\implies\left(\forall x\in X\mid:xRx\lor xSx\right)\\
-\equiv & \left\langle \text{Por debilitamiento, }a\land b\implies a\lor b\right\rangle \\
- & \true
+ & \left(\forall x,y\mid:xRy\Rightarrow yRx\right)\land\left(\forall x,y\mid:xSy\Rightarrow ySx\right)\\
+\equiv & \left\langle \text{Partir rango}\right\rangle \\
+ & \left(\forall x,y\mid:\left(xRy\Rightarrow yRx\right)\land\left(xSy\Rightarrow ySx\right)\right)\\
+\Rightarrow & \left\langle \left(a\Rightarrow b\right)\land\left(c\Rightarrow d\right)\implies\left(a\land c\Rightarrow b\land d\right)\right\rangle \\
+ & \left(\forall x,y\mid:xRy\land xSy\Rightarrow yRx\land ySx\right)\\
+\equiv & \left\langle \text{Definición de intersección}\right\rangle \\
+ & \left(\forall x,y\mid:x\left(R\cap S\right)y\Rightarrow y\left(R\cap S\right)x\right)\\
+\equiv & \left\langle \text{Definición de simetría}\right\rangle \\
+ & R\cap S\text{ es simétrica}
 \end{align*}
 
 \end_inset
@@ -369,6 +393,34 @@ Si
  es simétrica
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+A demostrar 
+\begin_inset Formula $\left(\forall x,y\mid:x\left(R\cup S\right)y\Rightarrow y\left(R\cup S\right)x\right)$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+ & R\cup S\text{ es simétrica}\\
+ & \left\langle \text{Definición de simetría}\right\rangle \\
+ & \left(\forall x,y\mid:x\left(R\cup S\right)y\Rightarrow y\left(R\cup S\right)x\right)\\
+\equiv & \left\langle \text{Definición de unión}\right\rangle \\
+ & \left(\forall x,y\mid:xRy\lor xSy\Rightarrow yRx\lor ySx\right)\\
+\equiv & \left\langle \text{Por hipótesis, }R\text{ es simétrica}\right\rangle \\
+ & \left(\forall x,y\mid:yRx\lor xSy\Rightarrow yRx\lor ySx\right)\\
+\equiv & \left\langle \text{Por hipótesis, }S\text{ es simétrica}\right\rangle \\
+ & \left(\forall x,y\mid:yRx\lor ySx\Rightarrow yRx\lor ySx\right)\\
+\equiv & \left\langle \text{Implica es reflexiva}\right\rangle \\
+ & \true
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Si 
 \begin_inset Formula $R$
@@ -398,9 +450,49 @@ Si
 \begin_inset Formula $R\cup S$
 \end_inset
 
- es transitiva
+ es transitiva 
+\series bold
+Falso
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Contraejemplo: 
+\series default
+
+\begin_inset Formula $X=\{1,2,3,4,5\}$
+\end_inset
+
+, 
+\begin_inset Formula $R=\left\{ (1,2),\,(2,3),\,(1,3)\right\} $
+\end_inset
+
+, 
+\begin_inset Formula $S=\left\{ m\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset space \hspace{}
+\length -1cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename union_transitivas.png
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 [1] Muestre que 
@@ -421,6 +513,22 @@ Si
 
  es antisimétrica sí y solo sí 
 \begin_inset Formula $R\cap R^{T}\subseteq I$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lipsum[3-10]
+\end_layout
+
 \end_inset
 
 

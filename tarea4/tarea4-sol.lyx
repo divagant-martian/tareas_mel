@@ -81,7 +81,7 @@
 \begin_body
 
 \begin_layout Title
-Tarea 4
+Tarea 4 - Solución
 \begin_inset Newline newline
 \end_inset
 
@@ -435,6 +435,25 @@ Si
 \end_inset
 
  es transitiva
+\begin_inset Formula 
+\begin{align*}
+ & R\text{ y }S\text{ son transitivas}\\
+\equiv & \left\langle \text{Definición de transitividad}\right\rangle \\
+ & \left(\forall x,y,z\mid:xRy\land yRz\Rightarrow xRz\right)\land\\
+ & \left(\forall x,y\mid:xSy\land ySz\Rightarrow xSz\right)\\
+\equiv & \left\langle \text{Partir rango}\right\rangle \\
+ & \left(\forall x,y,z\mid:\left(xRy\land yRz\Rightarrow xRz\right)\land\left(xSy\land ySz\Rightarrow xSz\right)\right)\\
+\Rightarrow & \left\langle \left(a\Rightarrow b\right)\land\left(c\Rightarrow d\right)\implies\left(a\land c\Rightarrow b\land d\right)\right\rangle \\
+ & \left(\forall x,y,z\mid:xRy\land xSy\land yRz\land ySz\Rightarrow xRz\land xSz\right)\\
+\equiv & \left\langle \text{Definición de intersección}\right\rangle \\
+ & \left(\forall x,y,z\mid:x\left(R\cap S\right)y\land y\left(R\cap S\right)z\Rightarrow x\left(R\cap S\right)z\right)\\
+\equiv & \left\langle \text{Definición de transitividad}\right\rangle \\
+ & R\cap S\text{ es transitiva}
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -506,6 +525,31 @@ Contraejemplo:
 
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & R\cap R^{T}=\varnothing\\
+\equiv & \left\langle \text{Def de }\varnothing\right\rangle \\
+ & \left(\forall x,y\mid:x\left(R\cap R^{T}\right)y\equiv\false\right)\\
+\equiv & \left\langle \text{Def de intersección}\right\rangle \\
+ & \left(\forall x,y\mid:xRy\land xR^{T}y\equiv\false\right)\\
+\equiv & \left\langle p\equiv\false\equiv\lnot p\right\rangle \\
+ & \left(\forall x,y\mid:\lnot\left(xRy\land xR^{T}y\right)\right)\\
+\equiv & \left\langle \text{DeMorgan}\right\rangle \\
+ & \left(\forall x,y\mid:\lnot xRy\lor\lnot xR^{T}y\right)\\
+\equiv & \left\langle \text{Def de transpuesta}\right\rangle \\
+ & \left(\forall x,y\mid:\lnot xRy\lor\lnot yRx\right)\\
+\equiv & \left\langle \text{Def de asimetría}\right\rangle \\
+ & R\text{ es asimétrica}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 [1] Muestre que 
 \begin_inset Formula $R$
@@ -516,18 +560,20 @@ Contraejemplo:
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-lipsum[3-10]
-\end_layout
+\begin_inset Formula 
+\begin{align*}
+ & R\cap R^{T}\subseteq I\\
+\equiv & \left\langle \text{Def de contenencia}\right\rangle \\
+ & \left(\forall x,y\mid:x\left(R\cap R^{T}\right)y\implies xIy\right)\\
+\equiv & \left\langle \text{Def de Identidad}\right\rangle \\
+ & \left(\forall x,y\mid:x\left(R\cap R^{T}\right)y\implies x=y\right)\\
+\equiv & \left\langle \text{Def de intersección}\right\rangle \\
+ & \left(\forall x,y\mid:xRy\land xR^{T}y\implies x=y\right)\\
+\equiv & \left\langle \text{Def de transpuesta}\right\rangle \\
+ & \left(\forall x,y\mid:xRy\land yRx\implies x=y\right)\\
+\equiv & \left\langle \text{Def de antisimetría}\right\rangle \\
+ & R\text{ es antisimétrica}
+\end{align*}
 
 \end_inset
 

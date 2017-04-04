@@ -1,0 +1,428 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\newcommand{\false}{\texttt{false} }
+\newcommand{\true}{\texttt{true} }
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Tarea 3 - Solución
+\begin_inset Newline newline
+\end_inset
+
+Matemática Estructural y Lógica
+\end_layout
+
+\begin_layout Enumerate
+Se dice que dos conjuntos 
+\begin_inset Formula $X$
+\end_inset
+
+ e 
+\begin_inset Formula $Y$
+\end_inset
+
+ son disjuntos si 
+\begin_inset Formula $X\cap Y=\emptyset$
+\end_inset
+
+.
+ Sean 
+\begin_inset Formula $A,A',B,B'$
+\end_inset
+
+ conjuntos tales que 
+\begin_inset Formula $A\subseteq A'$
+\end_inset
+
+ y 
+\begin_inset Formula $B\subseteq B'$
+\end_inset
+
+.
+ Demuestre que si 
+\begin_inset Formula $A'$
+\end_inset
+
+ y 
+\begin_inset Formula $B'$
+\end_inset
+
+ son disjuntos entonces 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ son disjuntos.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+A demostrar:
+\begin_inset Formula 
+\begin{align*}
+ & \left(A^{\prime}\cap B^{\prime}=\varnothing\right)\land\left(A\subseteq A^{\prime}\right)\land\left(B\subseteq B^{\prime}\right)\implies\left(A\cap B=\varnothing\right)\\
+\equiv & \left\langle \text{Metateorema}\right\rangle \\
+ & \left(a^{\prime}\land b^{\prime}\equiv\false\right)\land\left(a\Rightarrow a^{\prime}\right)\land\left(b\Rightarrow b^{\prime}\right)\implies\left(a\land b\equiv\false\right)\\
+\equiv & \left\langle p\equiv\false\equiv\lnot p\right\rangle \\
+ & \lnot\left(a^{\prime}\land b^{\prime}\right)\land\left(a\Rightarrow a^{\prime}\right)\land\left(b\Rightarrow b^{\prime}\right)\implies\lnot\left(a\land b\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dem
+\begin_inset Formula 
+\begin{align*}
+ & \lnot\left(a^{\prime}\land b^{\prime}\right)\land\left(a\Rightarrow a^{\prime}\right)\land\left(b\Rightarrow b^{\prime}\right)\\
+\implies & \left\langle \text{Distr \land/\Rightarrow}\right\rangle \\
+ & \lnot\left(a^{\prime}\land b^{\prime}\right)\land\left(a\land b\Rightarrow a^{\prime}\land b^{\prime}\right)\\
+\equiv & \left\langle \text{Contrapositiva}\right\rangle \\
+ & \lnot\left(a^{\prime}\land b^{\prime}\right)\land\left(\lnot\left(a^{\prime}\land b^{\prime}\right)\Rightarrow\lnot\left(a\land b\right)\right)\\
+\equiv & \left\langle \text{Modus ponens}\right\rangle \\
+ & \lnot\left(a\land b\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ conjuntos cualesquiera.
+ Demuestre que
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $(A\setminus B)^{c}\cap(B\setminus A)^{c}=(A\cup B)^{c}\cup(A\cap B)$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{align*}
+(A\setminus B)^{c}\cap(B\setminus A)^{c} & =(A\cup B)^{c}\cup(A\cap B)\\
+ & \left\langle \text{Definición}\right\rangle \\
+(A\cap B^{c})^{c}\cap(B\cap A^{c})^{c} & =(A\cup B)^{c}\cup(A\cap B)\\
+ & \left\langle \text{DeMorgan, doble negación}\right\rangle \\
+(A^{c}\cup B)\cap(B^{c}\cup A) & =(A^{c}\cap B^{c})\cup(A\cap B)\\
+ & \left\langle \text{Distributividad}\right\rangle \\
+\left((A^{c}\cup B)\cap B^{c}\right)\cup\left((A^{c}\cup B)\cap A\right) & =(A^{c}\cap B^{c})\cup(A\cap B)\\
+ & \left\langle \text{Distributividad}\right\rangle \\
+\boldsymbol{\left(A^{c}\cap B^{c}\right)}\cup\left(B\cap B^{c}\right)\cup\left(A^{c}\cap A\right)\cup\boldsymbol{\left(B\cap A\right)} & =\boldsymbol{(A^{c}\cap B^{c})}\cup\boldsymbol{(A\cap B)}\\
+ & \left\langle \text{Contradicción}\right\rangle \\
+\left(A^{c}\cap B^{c}\right)\cup\varnothing\cup\varnothing\cup\left(B\cap A\right) & =(A^{c}\cap B^{c})\cup(A\cap B)\\
+ & \left\langle \text{Identidad de la unión (Identidad del \ensuremath{\lor} es \ensuremath{\false})}\right\rangle \\
+\left(A^{c}\cap B^{c}\right)\cup\left(B\cap A\right) & =(A^{c}\cap B^{c})\cup(A\cap B)\\
+ & \left\langle \text{Conmutatividad}\right\rangle \\
+\left(A^{c}\cap B^{c}\right)\cup\left(A\cap B\right) & =(A^{c}\cap B^{c})\cup(A\cap B)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Demuestre que 
+\begin_inset Formula $(B\cap A=\emptyset)\implies((A\cup B)\setminus B)=A$
+\end_inset
+
+.
+ (Ayuda: Suponga la hipótesis y demuestre que 
+\begin_inset Formula $A\subseteq((A\cup B)\setminus B)$
+\end_inset
+
+ y 
+\begin_inset Formula $((A\cup B)\setminus B)\subseteq A$
+\end_inset
+
+).
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Primero veamos qué es 
+\begin_inset Formula $\left(A\cup B\right)\setminus B$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\left(A\cup B\right)\setminus B & \equiv\left(A\cup B\right)\cap B^{c}\\
+ & \equiv\left(A\cap B^{c}\right)\cup\left(B\cap B^{c}\right)\\
+ & \equiv\left(A\cap B^{c}\right)\cup\varnothing\\
+ & \equiv A\cap B^{c}
+\end{align*}
+
+\end_inset
+
+Entonces las demostraciones a hacer son
+\end_layout
+
+\begin_layout Enumerate
+Dem 
+\begin_inset Formula $(B\cap A=\emptyset)\implies A\cap B^{c}\subseteq A$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+ & (B\cap A=\emptyset)\implies\left(A\cap B^{c}\subseteq A\right)\\
+\equiv & \left\langle \text{Metateorema}\right\rangle \\
+ & (b\land a\equiv\false)\implies\left(a\land\lnot b\Rightarrow a\right)\\
+\equiv & \left\langle \text{Equivalencia con }\false\right\rangle \\
+ & \lnot(b\land a)\implies\left(a\land\lnot b\Rightarrow a\right)\\
+\equiv & \left\langle \text{Def de }\Rightarrow\right\rangle \\
+ & \left(b\land a\right)\lor\left(\lnot a\lor b\lor a\right)\\
+\equiv & \left\langle \text{Medio excluido}\right\rangle \\
+ & \true
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Dem 
+\begin_inset Formula $(B\cap A=\emptyset)\implies A\subseteq A\cap B^{c}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+ & (B\cap A=\emptyset)\implies\left(A\subseteq A\cap B^{c}\right)\\
+\equiv & \left\langle \text{Metateorema}\right\rangle \\
+ & (b\land a\equiv\false)\implies\left(a\Rightarrow a\land\lnot b\right)\\
+\equiv & \left\langle \text{Equivalencia con }\false\right\rangle \\
+ & \lnot(b\land a)\implies\left(a\Rightarrow a\land\lnot b\right)\\
+\equiv & \left\langle \text{Def de }\Rightarrow\right\rangle \\
+ & \left(b\land a\right)\lor\left(\lnot a\lor\left(a\land\lnot b\right)\right)\\
+\equiv & \left\langle \text{Absorción}\right\rangle \\
+ & \left(b\land a\right)\lor\left(\lnot a\lor\lnot b\right)\\
+\equiv & \left\langle \text{DeMorgan}\right\rangle \\
+ & \left(b\land a\right)\lor\lnot\left(a\land b\right)\\
+\equiv & \left\langle \text{Medio excluido}\right\rangle \\
+ & \true
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean A y B conjuntos cualesquiera.
+ Demuestre o refute cada una de las siguientes afirmaciones: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A\setminus(A\setminus B)=A\cap B$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{align*}
+ & A\setminus(A\setminus B)=A\cap B\\
+\equiv & \left\langle \text{Def de }\setminus\right\rangle \\
+ & A\cap(A\cap B^{c})^{c}=A\cap B\\
+\equiv & \left\langle \text{DeMorgan y doble negación}\right\rangle \\
+ & A\cap(A^{c}\cup B)=A\cap B\\
+\equiv & \left\langle \text{Absorción}\right\rangle \\
+ & A\cap B=A\cap B
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(A\cup B=A\cap B)\equiv(A=B)$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+ & (A\cup B=A\cap B)\equiv(A=B)\\
+\equiv & \left\langle \text{Metateorema}\right\rangle \\
+ & (a\lor b\equiv a\land b)\equiv(a\equiv b)\\
+\equiv & \left\langle \text{Regla de oro}\right\rangle \\
+ & \true
+\end{align*}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(A\subseteq B)\implies(A^{c}\subseteq B^{c})$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+ & (A\subseteq B)\implies(A^{c}\subseteq B^{c})\\
+\equiv & \left\langle \text{Metateorema}\right\rangle \\
+ & (a\Longrightarrow b)\implies(\lnot a\Longrightarrow\lnot b)\\
+\equiv & \left\langle \text{Contrapositiva}\right\rangle \\
+ & (a\Longrightarrow b)\implies(b\Longrightarrow a)\\
+ & \text{Ya podemos ver que es falso:}\\
+ & \text{Tomando }a\equiv\false\text{ y }b\equiv\true\\
+ & \text{En terminos de conjuntos el contrajemplo se traduce en}\\
+ & A=\varnothing\land B=\mathcal{U}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(A\subseteq B)\implies(B^{c}\subseteq A^{c})$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+ & (A\subseteq B)\implies(B^{c}\subseteq A^{c})\\
+\equiv & \left\langle \text{Metateorema}\right\rangle \\
+ & (a\Longrightarrow b)\implies(\lnot b\Longrightarrow\lnot a)\\
+\equiv & \left\langle \text{Contrapositiva}\right\rangle \\
+ & (a\Longrightarrow b)\implies(a\Longrightarrow b)\\
+\equiv & \left\langle \text{La implicación es reflexiva, es decir }\text{x\implies x\equiv\true}\right\rangle 
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Demuestre que 
+\begin_inset Formula $A\cup B=(A\setminus B)\cup(B\setminus A)\cup(A\cap B)$
+\end_inset
+
+ para cualesquiera 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ conjuntos.
+ 
+\begin_inset Formula 
+\begin{align*}
+A\cup B & =(A\setminus B)\cup(B\setminus A)\cup(A\cap B)\\
+ & \left\langle \text{Def de }\setminus\right\rangle \\
+ & =\boldsymbol{(A\cap B^{c})}\cup(B\cap A^{c})\cup\boldsymbol{(A\cap B)}\\
+ & \left\langle \text{Distributividad}\right\rangle \\
+ & =\left(A\cap\left(B^{c}\cup B\right)\right)\cup(B\cap A^{c})\\
+ & \left\langle \text{Medio excluído}\right\rangle \\
+ & =\left(A\cap\mathcal{U}\right)\cup(B\cap A^{c})\\
+ & \left\langle \text{Identidad de la intersección}\right\rangle \\
+ & =A\cup(B\cap A^{c})\\
+ & \left\langle \text{Absorción}\right\rangle \\
+ & =A\cup B
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

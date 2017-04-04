@@ -1,0 +1,267 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\newcommand{\false}{\texttt{false} }
+\newcommand{\true}{\texttt{true} }
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 2
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "allcolors=MidnightBlue"
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1.5cm
+\topmargin 1.5cm
+\rightmargin 1.5cm
+\bottommargin 1.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\bullet 0 0 9 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Tarea 1- MEL
+\end_layout
+
+\begin_layout Author
+Super estudiante 1, Super estudiante 2
+\end_layout
+
+\begin_layout Standard
+Entregar el jueves 23 hasta las 10pm.
+ En parejas.
+\end_layout
+
+\begin_layout Standard
+Todas las demostraciones se realizan SIN usar tablas de verdad
+\end_layout
+
+\begin_layout Enumerate
+Por este punto, defina
+\begin_inset Formula 
+\[
+A(p,q,r)\equiv\left(p\Longrightarrow q\right)\land\left(p\Longrightarrow r\right)
+\]
+
+\end_inset
+
+ y demuestre que:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A(p,q,\false)\equiv\lnot p$
+\end_inset
+
+ (Es decir, demuestre que cambiando el tercer argumento de 
+\begin_inset Formula $A$
+\end_inset
+
+ por 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+false
+\end_layout
+
+\end_inset
+
+ obtiene 
+\begin_inset Formula $\lnot p$
+\end_inset
+
+.
+ Se inicia la demostración como guia)
+\begin_inset Formula 
+\begin{align*}
+ & A(p,q,\false)\\
+\equiv & \left\langle \text{ Por definición de }A\right\rangle \\
+ & \left(p\Longrightarrow q\right)\land\left(p\Longrightarrow\false\right)\\
+\equiv & \left\langle \text{}\right\rangle \\
+ & \text{incluya tantas líneas como necesite}\\
+\equiv & \left\langle \text{}\right\rangle \\
+ & \lnot p
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $x\land A(x,x\Longrightarrow y,x\Longrightarrow z)\implies z$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Por este punto, defina
+\begin_inset Formula 
+\[
+B(p,q,r)\equiv\left(p\land\lnot q\right)\lor\left(q\land\lnot r\right)\lor\left(r\land\lnot p\right)
+\]
+
+\end_inset
+
+y demuestre que:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+ & \underline{\lnot B(p,q,r)\qquad}\\
+ & p\equiv q
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B(\true,q,r)\equiv\lnot r\lor\lnot q$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Demuestre que en el juego 
+\emph on
+cara yo gano, sello tú pierdes
+\emph default
+, siempre pasa que 
+\emph on
+yo gano
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Demuestre 
+\bar under
+formalmente
+\bar default
+ quiénes van al campamento.
+ Note que debe incluir en su formulación la oración en itálicas.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+Cuatro chicos A, B, C y D quieren ir a un campamento, pero son menores de
+ edad, así que sus padres los dejan ir únicamente 
+\emph on
+si van acompañados de al menos un amigo
+\emph default
+.
+ Sin embargo los padres no necesariamente aprueban a cualquier compañía.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Los padres de A no aprueban a C
+\end_layout
+
+\begin_layout Itemize
+Los padres de C no aprueban a D
+\end_layout
+
+\begin_layout Itemize
+Los padres de D aprueban a cualquier amigo
+\end_layout
+
+\begin_layout Itemize
+Los padres de B son las más estrictos: aprueban que B vaya con A, pero solo
+ si también va o C o D, pero no ambos.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_body
+\end_document

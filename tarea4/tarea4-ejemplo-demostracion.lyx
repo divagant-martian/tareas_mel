@@ -1,0 +1,172 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\newcommand{\false}{\texttt{false} }
+\newcommand{\true}{\texttt{true} }
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Tarea 4
+\begin_inset Newline newline
+\end_inset
+
+Matemática Estructural y Lógica
+\end_layout
+
+\begin_layout Enumerate
+[2] Sea 
+\begin_inset Formula $X$
+\end_inset
+
+ un conjunto cualquiera.
+ Sean 
+\begin_inset Formula $R$
+\end_inset
+
+ y 
+\begin_inset Formula $S$
+\end_inset
+
+ relaciones de 
+\begin_inset Formula $X$
+\end_inset
+
+ a 
+\begin_inset Formula $X$
+\end_inset
+
+, es decir 
+\begin_inset Formula $R:\,X\to X$
+\end_inset
+
+, 
+\begin_inset Formula $S:\,X\to X$
+\end_inset
+
+.
+ Demuestre o refute (es decir, de un contraejemplo diciendo claramente quiénes
+ son los conjuntos 
+\begin_inset Formula $X$
+\end_inset
+
+, 
+\begin_inset Formula $R$
+\end_inset
+
+ y 
+\begin_inset Formula $S$
+\end_inset
+
+)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $R$
+\end_inset
+
+ y 
+\begin_inset Formula $S$
+\end_inset
+
+ son reflexivas, 
+\begin_inset Formula $R\cap S$
+\end_inset
+
+ es reflexiva
+\begin_inset Formula 
+\begin{align*}
+ & R\text{ y }S\text{ son reflexivas},\text{ }R\cap S\text{ es reflexiva}\\
+\equiv & \left\langle \text{ Definición de reflexividad}\right\rangle \\
+ & \left(\forall x\in X\mid:xRx\right)\land\left(\forall x\in X\mid:xSx\right)\implies\left(\forall x\in X\mid:x\left(R\cap S\right)x\right)\\
+\equiv & \left\langle \text{ Cambio de notación }\right\rangle \\
+ & \left(\forall x\in X\mid:xRx\right)\land\left(\forall x\in X\mid:xSx\right)\implies\left(\forall x\in X\mid:\left(x,x\right)\in\left(R\cap S\right)\right)\\
+\equiv & \left\langle \text{ Definición de intersección }\right\rangle \\
+ & \left(\forall x\in X\mid:xRx\right)\land\left(\forall x\in X\mid:xSx\right)\implies\left(\forall x\in X\mid:\left(x,x\right)\in R\land\left(x,x\right)\in S\right)\\
+\equiv & \left\langle \text{ Cambio de notación }\right\rangle \\
+ & \left(\forall x\in X\mid:xRx\right)\land\left(\forall x\in X\mid:xSx\right)\implies\left(\forall x\in X\mid:xRx\land xSx\right)\\
+\equiv & \left\langle \text{ Partir rango }\right\rangle \\
+ & \left(\forall x\in X\mid:xRx\land xSx\right)\implies\left(\forall x\in X\mid:xRx\land xSx\right)\\
+\equiv & \left\langle \text{ Implica es reflexiva: }p\Rightarrow p\equiv\true\right\rangle \\
+ & \\true
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
